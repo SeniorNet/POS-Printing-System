@@ -1,0 +1,43 @@
+﻿@model POS_PrintingServer_API.API.ViewModels.LoginViewModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm("Login", "Home", FormMethod.Post))
+        {
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            if (ViewBag.ErrorMessage != null)
+            {
+                <h2 style="color:red">@ViewBag.ErrorMessage</h2>
+            }
+
+            <table>
+
+                <tr>
+                    <td>UUID : </td>
+                    <td style="width:300px">@Html.TextBoxFor(m => m.uuid, new { Style = "width:300px;" })</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" value="Login" /></td>
+
+                </tr>
+            </table>
+        }
+    </div>
+</body>
+</html>

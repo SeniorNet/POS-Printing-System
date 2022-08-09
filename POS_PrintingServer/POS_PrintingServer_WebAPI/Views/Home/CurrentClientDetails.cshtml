@@ -1,0 +1,132 @@
+﻿@model POS_PrintingServer_API.API.ViewModels.ClientDetailsViewModel
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Current Client Details</title>
+</head>
+<body>
+    <div>
+        <h3>Client Details : </h3>
+        <table>
+            <tr>
+                <td style="text-align:right">
+                    Id :
+                </td>
+                <td>
+                    <b>
+                        @Model.id
+                    </b>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align:right">
+                    UUIS :
+                </td>
+                <td>
+                    <b>
+                        @Model.uuid
+                    </b>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align:right">
+                    Pos Type :
+                </td>
+                <td>
+                    <b>
+                        @Model.pos_type
+                    </b>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align:right">
+                    POS Host :
+                </td>
+                <td>
+                    <b>
+                        @Model.pos_host
+                    </b>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align:right">
+                    POS Port :
+                </td>
+                <td>
+                    <b>
+                        @Model.pos_port
+                    </b>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align:right">
+                    OS :
+                </td>
+                <td>
+                    <b>
+                        @Model.os
+                    </b>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align:right">
+                    Architecture :
+                </td>
+                <td>
+                    <b>
+                        @Model.architecture
+                    </b>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align:right">
+                    POS User Name :
+                </td>
+                <td>
+                    <b>
+                        @Model.pos_username
+                    </b>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align:right">
+                    POS Password :
+                </td>
+                <td>
+                    <b>
+                        @Model.pos_password
+                    </b>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align:right">
+                    Company uin :
+                </td>
+                <td>
+                    <b>
+                        @Model.company.uin
+                    </b>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align:right">
+                    Created On :
+                </td>
+                <td>
+                    <b>
+                        @Model.CreationDate
+                    </b>
+                </td>
+            </tr>
+        </table>
+        <br />
+        <a style="color:red" href="@Url.Action("DeleteCurrentClientDetails","Home")"  onclick="return confirm('Are you sure?')">Delete Current Client details</a> 
+    </div>
+</body>
+</html>
+
